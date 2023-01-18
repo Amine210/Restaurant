@@ -1,0 +1,172 @@
+body > #header{
+    top:0;
+    position: fixed ;
+    z-index: 1;
+    width: 100%;
+    height: 65px;
+    background-image: inherit;
+    color: white;
+    display: flex;
+    /* box-shadow: var(--NavBar-color) 1px 1px 1px; */
+    transition: all 1s;
+    
+    
+    
+   
+}
+.whiteHeader
+{
+    background-color: white;
+}
+
+
+
+#logo,#headerRIght{
+   
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    padding-right: 5%;
+}
+#headerRIght
+{
+    width: 30%;
+}
+
+#logo{
+    width: 30%;
+    color: var(--NavBar-color);
+   
+    font-size: 40px ;
+    font-weight: 1200;
+    
+}
+#logo>*
+{
+    font-family: 'Kaushan Script', cursive;
+}
+
+
+
+#headerRIght i 
+{
+    width: max(6%,15px);
+
+    margin-left: 30px;
+    color: var(--NavBar-color) ;
+    
+}
+
+#headerRIght i:nth-child(2)
+{
+    display: none;
+}
+
+#headerRIght button:hover
+{
+    cursor: pointer;
+    transform: scale(1.08);
+}
+#headerRIght i:hover
+{
+    transform: scale(1.08);
+    cursor: pointer;
+}
+#navBar
+{
+    position: relative;     
+    width:70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:max(0.9vw,16px);
+
+}
+ul{
+    word-spacing: 1.15vw;
+}
+#navBar li{
+    display: inline;
+    color: var(--NavBar-color);
+    
+   
+    
+
+}
+a{
+    text-decoration: none;
+}
+
+
+a{
+    position: relative;
+    
+}
+a::after
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0px;
+    background-color: var(--NavBar-color) ;
+    transition: all 1s;     
+}
+
+a:hover::after
+{
+    
+    width: 100%;
+   
+}
+
+
+#logo:hover span
+{
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-direction:forwards 
+}
+
+@keyframes shake
+{
+    0%{
+        transform:  rotate(0deg)
+    }
+    50%{
+        transform:  rotate(180deg)
+    }
+    100%{
+        transform:  rotate(360deg)
+    }
+} 
+
+
+
+
+
+
+
+@media screen and (max-width:776px) {
+    
+    #navBar , #headerRIght button
+    {
+        display: none;
+    }
+    #headerRIght i:nth-child(2)
+    {
+        display:block;
+        
+    }
+    
+    #iconContainer
+    {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        right: 10px;
+        
+    }
+
+}

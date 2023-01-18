@@ -1,0 +1,103 @@
+#sideBarMain  
+{
+    
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(128, 128, 128, 0.555);
+    width: 100vw;
+    height: 100vh;
+}
+.hideElement
+{
+    display: none;
+}
+
+#sideBar
+{
+    position:fixed;
+    z-index: 3  ;
+    right: -50%;
+    background-color: white;
+    width:200px;
+    height: 1400px;
+     
+    text-align: center;
+    transition: all 1s;
+    padding: 0 0 0 0;
+   
+}
+
+#sideBar ul{
+    list-style-type: none;
+    font-size: 1rem;
+    margin-top: 50px
+    
+    
+}
+#sideBar li{
+    margin-top: 8%;
+    color: black;
+}
+
+#sideBar li:hover
+{
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+#exitleSIdeBarButton
+{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+#exitleSIdeBarButton:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+a{
+    position: relative;
+    
+}
+a::after
+{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0px;
+    background-color: var(--light-color);
+    transition: all 1s;     
+}
+
+a:hover::after
+{
+    
+    width: 100%;
+   
+}
+
+
+#logo:hover span
+{
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-direction:forwards 
+}
+
+@keyframes shake
+{
+    0%{
+        transform:  rotate(0deg)
+    }
+    50%{
+        transform:  rotate(180deg)
+    }
+    100%{
+        transform:  rotate(360deg)
+    }
+} 
+
+
